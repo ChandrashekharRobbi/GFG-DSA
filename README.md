@@ -4,4 +4,4 @@ I will be writing theory explaination , implmentation and problems based on each
 
 I will be using **Jupyter Notebook** as IDE
 
-> Note:  so the links which you see at start of any notebook may not open in Github 
+> Note:  so the links which you see at start of any notebook may not be able to open in Github 
