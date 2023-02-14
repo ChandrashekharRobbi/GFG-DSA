@@ -16,9 +16,6 @@ class MyFunction:
         comment = f"7. [{s}](#{s.replace(' ','-')})"
         markdown = f"#### {s}"
         if comment not in self.arr:
-            print(s)
-            print(comment)
-            print(markdown)
             pypc.copy(f"#### {s}")
             self.arr.append(comment)
             print("Successfully added to the comment list")
