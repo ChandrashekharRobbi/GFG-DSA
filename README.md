@@ -9,3 +9,4 @@ I will be using **Jupyter Notebook** as IDE
 Topics 
 
 1. [Circular Linked List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Circular%20Linked%20List.ipynb)
+2. [Deque](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Deque.ipynb)
