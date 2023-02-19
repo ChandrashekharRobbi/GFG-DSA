@@ -13,7 +13,7 @@ class MyFunction:
         self.arr = []
         
     def new(self, s):
-        comment = f"7. [{s}](#{s.replace(' ','-')})"
+        comment = f"1. [{s}](#{s.replace(' ','-')})"
         markdown = f"#### {s}"
         if comment not in self.arr:
             pypc.copy(f"#### {s}")
