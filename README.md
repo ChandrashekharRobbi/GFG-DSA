@@ -11,3 +11,4 @@ Topics
 1. [Circular Linked List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Circular%20Linked%20List.ipynb)
 2. [Deque](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Deque.ipynb)
 3. [Doubly Circular Linked List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Doubly%20Linked%20List.ipynb)
+4. [Stack](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Stack.ipynb)
