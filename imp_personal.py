@@ -12,11 +12,12 @@ class MyFunction:
     def __init__(self):
         self.arr = []
         
-    def new(self, s):
+    def new(self, s, h=4):
+        hash = "#"*h
         comment = f"1. [{s}](#{s.replace(' ','-')})"
-        markdown = f"#### {s}"
+        markdown = f"{hash} {s}"
         if comment not in self.arr:
-            pypc.copy(f"#### {s}")
+            pypc.copy(markdown)
             self.arr.append(comment)
             print("Successfully added to the comment list")
         else:
@@ -34,3 +35,4 @@ class MyFunction:
     
     def makeNullArr(self):
         self.arr = []
+        
