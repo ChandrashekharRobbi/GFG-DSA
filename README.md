@@ -18,6 +18,7 @@ Topics
 7. [Tree](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Binary%20Search%20Tree.ipynb)
 8. [Sorting](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Sorting.ipynb)
 9. [Queue](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Queue.ipynb)
+10. [Hashing](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Hashing.ipynb)
 
 
 
