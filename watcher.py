@@ -60,6 +60,7 @@ class Handler(FileSystemEventHandler):
             time.sleep(1)
             os.popen("git push")
             # os.popen("^C")
+            time.sleep(10)
 
             
 
