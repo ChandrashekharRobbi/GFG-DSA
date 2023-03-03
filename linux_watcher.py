@@ -5,7 +5,7 @@ from watchdog.events import FileSystemEventHandler
 
 
 class Watcher:
-    DIRECTORY_TO_WATCH = "C:\GFG_DataScience\DSA"
+    DIRECTORY_TO_WATCH = "/home/robbbi/Downloads/chandrashekhar/DSA"
 
     def __init__(self):
         self.observer = Observer()
