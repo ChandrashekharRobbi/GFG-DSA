@@ -13,7 +13,6 @@ Topics
 2. [Stack](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Stack.ipynb)
 9. [Queue](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Queue.ipynb)
 3. [Deque](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Deque.ipynb)
-5. [Circular Linked List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Circular%20Linked%20List.ipynb)
 6. [Doubly Linked List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Doubly%20Linked%20List.ipynb)
 6. [Circuar Linked List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Circular%20Linked%20List.ipynb)
 7. [Tree](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Binary%20Search%20Tree.ipynb)
