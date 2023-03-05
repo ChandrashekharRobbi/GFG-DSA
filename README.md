@@ -14,6 +14,7 @@ Topics
 9. [Queue](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Queue.ipynb)
 3. [Deque](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Deque.ipynb)
 6. [Doubly Linked List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Doubly%20Linked%20List.ipynb)
+7. [Linked List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Linked%20List.ipynb)
 6. [Circuar Linked List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Circular%20Linked%20List.ipynb)
 7. [Tree](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Binary%20Search%20Tree.ipynb)
 8. [Sorting](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Sorting.ipynb)
