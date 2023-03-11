@@ -5,6 +5,7 @@ class MyFunction:
     This function can create the markdown and comment by justing entering your message by calling new function
     It has also additional features like as you enter the message and run the cell the comment is automatically gets copied in your clipboard
     the default value for comment is 4 i.e 4*#
+    You can change the value by taking whatever number you want
     it has functions like 
     new(string) -> For creating new comment, markdown
     printArr() -> to print the content of the arr
