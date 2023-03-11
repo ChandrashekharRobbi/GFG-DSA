@@ -26,17 +26,17 @@ class MyFunction:
             print("Successfully added to the comment list")
         else:
             print('It is already in the list')
+            
     def printArr(self):
         for i in self.arr:
-            print(i)
-            
+            print(i)  
             
     def removeLastelement(self):
-        self.arr.pop()
+        self.arr.pop()  
         
     def removeByUsingIndex(self, x):
         self.arr.pop(x)
-    
+        
     def makeNullArr(self):
         self.arr = []
         
