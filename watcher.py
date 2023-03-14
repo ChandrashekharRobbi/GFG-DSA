@@ -3,6 +3,8 @@ import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
+os.popen("git pull")
+
 
 class Watcher:
     DIRECTORY_TO_WATCH = "C:\GFG_DataScience\DSA"
