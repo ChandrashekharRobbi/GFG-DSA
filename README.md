@@ -20,7 +20,7 @@ Topics
 8. [Sorting](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Sorting.ipynb)
 10. [Hashing](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Hashing.ipynb)
 11. [Heap](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Heap.ipynb)
-12. [Bit Magic]
+12. [Bit Magic]()
 
 
 
