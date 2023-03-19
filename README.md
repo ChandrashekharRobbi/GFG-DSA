@@ -9,6 +9,7 @@ I will be using **Jupyter Notebook** as IDE
 Topics 
 
 1. [Python OOPS](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Python%20(OOPS).ipynb)
+12. [Bit Magic](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Bit%20Magic.ipynb)
 4. [Strings](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Strings.ipynb)
 2. [Stack](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Stack.ipynb)
 9. [Queue](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Queue.ipynb)
@@ -20,7 +21,7 @@ Topics
 8. [Sorting](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Sorting.ipynb)
 10. [Hashing](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Hashing.ipynb)
 11. [Heap](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Heap.ipynb)
-12. [Bit Magic](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Bit%20Magic.ipynb)
+
 
 
 
