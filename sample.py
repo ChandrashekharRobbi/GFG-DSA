@@ -5,7 +5,7 @@ executed_cells = []
 
 # Execute a cell and store its reference
 
-    
+from IPython.display import display, Javascript
 
 def delete_cell():
     display(Javascript('''
@@ -13,11 +13,15 @@ def delete_cell():
         var prev = cell_index - 1;
         IPython.notebook.delete_cell(cell_index);
         console.log("Cell deleted");
-        console.log("prev =", prev);
-        IPython.notebook.kernel.execute("prev = " + prev);
+        IPython.notebook.kernel.execute("prev = " + prev, 
+                                         { iopub: { output: function(data) { console.log(data); }}});   
     '''))
-    prev = get_ipython().user_ns['prev']
-    print("Previous cell index:", prev)
+    try:
+        prev = get_ipython().user_ns['prev']
+        print("Previous cell index:", prev)
+    except KeyError:
+        print("Failed to retrieve previous cell index")
+
 
 
     
