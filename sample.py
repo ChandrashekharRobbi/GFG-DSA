@@ -4,30 +4,22 @@ from IPython.display import display, Javascript
 executed_cells = []
 
 # Execute a cell and store its reference
-def execute_cell(index):
-    display(Javascript('IPython.notebook.execute_cells([' + str(index) + '])'))
-    cell = get_ipython().user_ns['_']
-    executed_cells.append(cell)
 
-# Delete all executed cells
-def delete_executed_cells():
-    for cell in executed_cells:
-        cell.parent.delete_cell(cell.index)
-    # Clear the array of executed cells
-    executed_cells = []
     
+
+from IPython.display import display, Javascript
 
 def delete_cell():
     display(Javascript('''
         var cell_index = IPython.notebook.get_selected_index();
         var prev = cell_index - 1;
-        IPython.notebook.select(prev);
-        
-        console.log("yeah it is update");
+        IPython.notebook.delete_cell(cell_index);
+        console.log("Cell deleted");
         IPython.notebook.kernel.execute("prev = " + prev);
     '''))
     prev = get_ipython().user_ns['prev']
-    print(f"The previous cell index was {prev}.")
+    print("Previous cell index:", prev)
+
     
     
 #     def delete_cell():
