@@ -28,7 +28,7 @@ class MyFunction:
         
     def to_markdown(self):
         display(Javascript('''
-            IPython.notebook.insert_cell_below()();
+            IPython.notebook.insert_cell_below();
             IPython.notebook.to_markdown();
         '''))
         
