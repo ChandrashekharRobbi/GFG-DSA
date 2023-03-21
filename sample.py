@@ -7,18 +7,18 @@ executed_cells = []
 
     
 
-from IPython.display import display, Javascript
-
 def delete_cell():
     display(Javascript('''
         var cell_index = IPython.notebook.get_selected_index();
         var prev = cell_index - 1;
         IPython.notebook.delete_cell(cell_index);
         console.log("Cell deleted");
+        console.log("prev =", prev);
         IPython.notebook.kernel.execute("prev = " + prev);
     '''))
     prev = get_ipython().user_ns['prev']
     print("Previous cell index:", prev)
+
 
     
     
