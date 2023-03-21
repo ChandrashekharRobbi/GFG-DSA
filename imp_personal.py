@@ -31,9 +31,9 @@ class MyFunction:
             var cell_index = IPython.notebook.get_selected_index();
             var prev = cell_index - 1;
             IPython.notebook.select(prev);
-            IPython.notebook.delete_cell(cell_index);
             IPython.notebook.insert_cell_below();
             IPython.notebook.to_markdown();
+            IPython.notebook.delete_cell(cell_index);
         '''))
         
     def new(self, s, h=4):
