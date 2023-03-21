@@ -26,6 +26,11 @@ class MyFunction:
             IPython.notebook.delete_cell(prev);
         '''))
         
+    def to_markdown(self):
+        display(Javascript('''
+            IPython.notebook.to_markdown();
+        '''))
+        
     def new(self, s, h=4):
         hash = "#"*h
         comment = f"1. [{s}](#{s.replace(' ','-')})"
@@ -34,10 +39,12 @@ class MyFunction:
             pypc.copy(markdown)
             self.arr.append(comment)
             print("Successfully added to the comment list")
+            self.to_markdown()
             time.sleep(1)
             self.delete_cell()
         else:
             print('It is already in the list')
+            self.to_markdown()
             time.sleep(1)
             self.delete_cell()
             
