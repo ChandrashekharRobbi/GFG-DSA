@@ -21,6 +21,7 @@ def delete_cell():
     display(Javascript('''
         var cell_index = IPython.notebook.get_selected_index();
         var prev = cell_index - 1;
+        IPython.notebook.select(prev);
         IPython.notebook.kernel.execute("prev = " + prev);
     '''))
     prev = get_ipython().user_ns['prev']
