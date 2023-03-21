@@ -21,6 +21,13 @@ def delete_cell():
     display(Javascript('''
         var cell_index = IPython.notebook.get_selected_index();
         var prev = cell_index - 1;
-        IPython.notebook.delete_cell(prev);
     '''))
     print(prev)
+    
+    
+#     def delete_cell():
+#     display(Javascript('''
+#         var cell_index = IPython.notebook.get_selected_index();
+#         var prev = cell_index - 1;
+#         IPython.notebook.delete_cell(prev);
+#     '''))
