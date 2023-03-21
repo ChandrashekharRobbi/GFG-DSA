@@ -30,6 +30,7 @@ class MyFunction:
         display(Javascript('''
             IPython.notebook.insert_cell_below();
             IPython.notebook.to_markdown();
+            IPython.notebook.focus_cell();
         '''))
         
     def new(self, s, h=4):
