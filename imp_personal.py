@@ -28,9 +28,11 @@ class MyFunction:
         
     def to_markdown(self):
         display(Javascript('''
+            var cell_index = IPython.notebook.get_selected_index();
+            var prev = cell_index - 1;
+            IPython.notebook.select(prev);
             IPython.notebook.insert_cell_below();
             IPython.notebook.to_markdown();
-            IPython.notebook.focus_cell();
         '''))
         
     def new(self, s, h=4):
