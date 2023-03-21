@@ -2,6 +2,7 @@
 
 from IPython.display import display, Javascript
 
+z_val = []
 def delete_cell():
     display(Javascript('''
         var cell_index = IPython.notebook.get_selected_index();
@@ -13,8 +14,10 @@ def delete_cell():
     try:
         prev = get_ipython().user_ns['prev']
         print("Previous cell index:", prev)
+        z_val.append(prev)
     except KeyError:
         print("Failed to retrieve previous cell index")
+        
 
 
 # def delete_cell():
