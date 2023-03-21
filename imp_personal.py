@@ -17,7 +17,7 @@ class MyFunction:
     '''
     def __init__(self):
         self.arr = []
-        print("I am changed!!")
+        print("I am gola!!")
         
     def delete_cell(self):
         display(Javascript('''
