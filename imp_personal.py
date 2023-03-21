@@ -22,7 +22,7 @@ class MyFunction:
     def delete_cell(self):
         display(Javascript('''
             var cell_index = IPython.notebook.get_selected_index();
-            prev = cell_index - 1;
+            var prev = cell_index - 1;
             IPython.notebook.delete_cell(prev);
         '''))
         
