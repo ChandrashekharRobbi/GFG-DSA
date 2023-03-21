@@ -17,7 +17,7 @@ class MyFunction:
     '''
     def __init__(self):
         self.arr = []
-        print("I am gola!!")
+        print("Please note the output by using this function get automatically deleted after 2 seconds")
         
     def delete_cell(self):
         display(Javascript('''
@@ -34,21 +34,31 @@ class MyFunction:
             pypc.copy(markdown)
             self.arr.append(comment)
             print("Successfully added to the comment list")
-            time.sleep(5)
+            time.sleep(3)
             self.delete_cell()
         else:
             print('It is already in the list')
+            time.sleep(3)
+            self.delete_cell()
             
     def printArr(self):
         for i in self.arr:
-            print(i)  
+            print(i) 
+        time.sleep(3)
+        self.delete_cell()
             
     def removeLastelement(self):
-        self.arr.pop()  
+        self.arr.pop() 
+        time.sleep(3)
+        self.delete_cell()
         
     def removeByUsingIndex(self, x):
         self.arr.pop(x)
+        time.sleep(3)
+        self.delete_cell()
         
     def makeNullArr(self):
         self.arr = []
+        time.sleep(3)
+        self.delete_cell()
         
