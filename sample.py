@@ -1,9 +1,4 @@
-from IPython.display import display, Javascript
 
-# Define an array to store references to executed cells
-executed_cells = []
-
-# Execute a cell and store its reference
 
 from IPython.display import display, Javascript
 
