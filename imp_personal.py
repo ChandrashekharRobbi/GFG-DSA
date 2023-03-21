@@ -19,21 +19,17 @@ class MyFunction:
         self.arr = []
         print("Please note the output by using this function get automatically deleted after 1 seconds\nAnd also note that after executing new function your next cell will automatically converted to markdown cell :)")
         
-#     def delete_cell(self):
-#         display(Javascript('''
-#             var cell_index = IPython.notebook.get_selected_index();
-#             var prev = cell_index - 1;
-#             IPython.notebook.delete_cell(prev);
-#         '''))
-        
-    def to_markdown(self):
+    def delete_cell(self):
         display(Javascript('''
             var cell_index = IPython.notebook.get_selected_index();
             var prev = cell_index - 1;
-            IPython.notebook.select(prev);
+            IPython.notebook.delete_cell(prev);
+        '''))
+        
+    def to_markdown(self):
+        display(Javascript('''
             IPython.notebook.insert_cell_below();
             IPython.notebook.to_markdown();
-            IPython.notebook.delete_cell(cell_index);
         '''))
         
     def new(self, s, h=4):
@@ -46,7 +42,7 @@ class MyFunction:
             print("Successfully added to the comment list")
             self.to_markdown()
             time.sleep(1)
-#             self.delete_cell()
+            self.delete_cell()
         else:
             print('It is already in the list')
             self.to_markdown()
