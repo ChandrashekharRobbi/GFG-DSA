@@ -13,6 +13,7 @@ def delete_cell():
     '''))
     try:
         prev = get_ipython().user_ns['prev']
+        time.sleep(10)
         print("Previous cell index:", prev)
     except KeyError:
         print("Failed to retrieve previous cell index")
