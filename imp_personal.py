@@ -17,7 +17,7 @@ class MyFunction:
     '''
     def __init__(self):
         self.arr = []
-        print("Please note the output by using this function get automatically deleted after 2 seconds")
+        print("Please note the output by using this function get automatically deleted after 1 seconds\nAnd also note that after executing new function your next cell will automatically converted to markdown cell :)")
         
     def delete_cell(self):
         display(Javascript('''
