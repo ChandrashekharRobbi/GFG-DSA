@@ -15,6 +15,7 @@ def delete_cell():
         prev = get_ipython().user_ns['prev']
         print("Previous cell index:", prev)
         z_val.append(prev)
+        print(z_val)
     except KeyError:
         print("Failed to retrieve previous cell index")
         
