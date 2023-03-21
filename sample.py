@@ -22,8 +22,9 @@ def delete_cell():
         var cell_index = IPython.notebook.get_selected_index();
         var prev = cell_index - 1;
         IPython.notebook.select(prev);
-        IPython.notebook.kernel.execute("prev = " + prev);
+        
         console.log("yeah it is update");
+        IPython.notebook.kernel.execute("prev = " + prev);
     '''))
     prev = get_ipython().user_ns['prev']
     print(f"The previous cell index was {prev}.")
