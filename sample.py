@@ -18,6 +18,16 @@ def delete_cell():
     except KeyError:
         print("Failed to retrieve previous cell index")
         
+def delete_all(arr):
+    display(Javascript('''
+        var cell_index = IPython.notebook.get_selected_index();
+        var prev = cell_index - 1;
+        IPython.notebook.delete_cell({arr[1]});
+        console.log("Cell deleted");
+        IPython.notebook.kernel.execute("prev = " + prev, 
+                                         { iopub: { output: function(data) { console.log(data); }}});   
+    '''))
+        
 
 
 # def delete_cell():
