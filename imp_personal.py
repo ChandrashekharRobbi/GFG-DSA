@@ -40,19 +40,19 @@ class MyFunction:
             pypc.copy(markdown)
             self.arr.append(comment)
             print("Successfully added to the comment list")
-            self.to_markdown()
-            time.sleep(1)
-            self.delete_cell()
+#             self.to_markdown()
+#             time.sleep(1)
+#             self.delete_cell()
         else:
             print('It is already in the list')
-            self.to_markdown()
-            time.sleep(1)
-            self.delete_cell()
+#             self.to_markdown()
+#             time.sleep(1)
+#             self.delete_cell()
             
     def printArr(self):
         for i in self.arr:
             print(i) 
-        time.sleep(3)
+        time.sleep(5)
         self.delete_cell()
             
     def removeLastelement(self):
