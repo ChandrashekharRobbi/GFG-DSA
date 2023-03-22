@@ -59,7 +59,7 @@ class MyFunction:
         for i in self.arr:
             print(i) 
         time.sleep(5)
-        self.delete_cell_prev()
+        self.delete_cell_curr()
             
     def removeLastelement(self):
         self.arr.pop() 
