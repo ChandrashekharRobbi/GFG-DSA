@@ -19,11 +19,17 @@ class MyFunction:
         self.arr = []
         print("Note that after executing new function your next cell will automatically converted to markdown cell :)")
         
-    def delete_cell(self):
+    def delete_cell_prev(self):
         display(Javascript('''
             var cell_index = IPython.notebook.get_selected_index();
             var prev = cell_index - 1;
             IPython.notebook.delete_cell(prev);
+        '''))
+        
+    def delete_cell_curr(self):
+        display(Javascript('''
+            var cell_index = IPython.notebook.get_selected_index();
+            IPython.notebook.delete_cell(cell_index);
         '''))
         
     def to_markdown(self):
@@ -42,31 +48,31 @@ class MyFunction:
             print("Successfully added to the comment list")
             self.to_markdown()
 #             time.sleep(1)
-#             self.delete_cell()
+#             self.delete_cell_prev()
         else:
             print('It is already in the list')
             self.to_markdown()
 #             time.sleep(1)
-#             self.delete_cell()
+#             self.delete_cell_prev()
             
     def printArr(self):
         for i in self.arr:
             print(i) 
         time.sleep(5)
-        self.delete_cell()
+        self.delete_cell_prev()
             
     def removeLastelement(self):
         self.arr.pop() 
         time.sleep(3)
-        self.delete_cell()
+        self.delete_cell_prev()
         
     def removeByUsingIndex(self, x):
         self.arr.pop(x)
         time.sleep(3)
-        self.delete_cell()
+        self.delete_cell_prev()
         
     def makeNullArr(self):
         self.arr = []
         time.sleep(3)
-        self.delete_cell()
+        self.delete_cell_prev()
         
