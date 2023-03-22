@@ -17,7 +17,7 @@ class MyFunction:
     '''
     def __init__(self):
         self.arr = []
-        print("Please note the output by using this function get automatically deleted after 1 seconds\nAnd also note that after executing new function your next cell will automatically converted to markdown cell :)")
+        print("Note that after executing new function your next cell will automatically converted to markdown cell :)")
         
     def delete_cell(self):
         display(Javascript('''
@@ -40,12 +40,12 @@ class MyFunction:
             pypc.copy(markdown)
             self.arr.append(comment)
             print("Successfully added to the comment list")
-#             self.to_markdown()
+            self.to_markdown()
 #             time.sleep(1)
 #             self.delete_cell()
         else:
             print('It is already in the list')
-#             self.to_markdown()
+            self.to_markdown()
 #             time.sleep(1)
 #             self.delete_cell()
             
