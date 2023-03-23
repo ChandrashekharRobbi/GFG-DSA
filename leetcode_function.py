@@ -55,6 +55,7 @@ class LeetFunction:
             pypc.copy(markdown)
             self.arr.append(comment)
             print("Successfully added to the comment list")
+            print(f"Here is the link {leet_link}\nAll the best Chandrashekhar")
         elif self.delete:
             self.delete_cell_prev()
 #             self.to_markdown()
