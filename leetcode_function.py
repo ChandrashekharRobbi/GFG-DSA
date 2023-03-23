@@ -67,10 +67,15 @@ class LeetFunction:
 #             self.delete_cell_prev()
             
     def printArr(self):
-        for i in self.arr:
+        sum = ""
+        for i in range(len(arr)):
+            if i != len(arr) - 1:
+                sum += arr[i] + "\n"
+            else:
+                sum += arr[i]
             print(i) 
-        time.sleep(5)
-        self.delete_cell_curr()
+        pypc.copy(sum)
+        self.delete_cell_prev()
             
     def removeLastelement(self):
         self.arr.pop() 
