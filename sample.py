@@ -46,7 +46,7 @@ class MyFunction:
             pypc.copy(markdown)
             self.arr.append(comment)
             print("Successfully added to the comment list")
-        if delete:
+        elif delete:
             self.delete_cell_prev()
 #             self.to_markdown()
 #             time.sleep(1)
