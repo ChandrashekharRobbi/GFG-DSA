@@ -43,7 +43,10 @@ class LeetFunction:
         hash = "#"*h
         link = "https://leetcode.com/problems/"
         # print(s)
-        text = "-".join(s.split(".")[1:][0].split()).lower()
+        try:
+            text = "-".join(s.split(".")[1:][0].split()).lower()
+        except:
+            text = "-".join(s.split()).lower()
         leet_link =link + text
         leet_link
         comment = f"* ✅ [{s}](#{s.replace(' ','-')})           [<a href='{leet_link}' style='color:black'>Link</a>]"
