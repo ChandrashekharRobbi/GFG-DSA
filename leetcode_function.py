@@ -18,7 +18,7 @@ class LeetFunction:
     def __init__(self):
         self.arr = []
         self.delete = False
-        print("Note that after executing new function your next cell will automatically converted to markdown cell :)")
+        print("Note this function is especially created for my leet code solving purposes \nIt takes name of the problem and return leetcode link and it also created array which has markdown, comment and delete after executing and many more :) :)")
         
     def delete_cell_prev(self):
         display(Javascript('''
