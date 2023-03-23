@@ -38,7 +38,7 @@ class MyFunction:
             IPython.notebook.to_markdown();
         '''))
         
-    def new(self, s, h=4, delete=False):
+    def new(self, s="default", h=4, delete=False):
         hash = "#"*h
         comment = f"1. [{s}](#{s.replace(' ','-')})"
         markdown = f"{hash} {s}"
