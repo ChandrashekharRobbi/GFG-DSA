@@ -17,6 +17,7 @@ class MyFunction:
     '''
     def __init__(self):
         self.arr = []
+        self.delete = False
         print("Note that after executing new function your next cell will automatically converted to markdown cell :)")
         
     def delete_cell_prev(self):
@@ -46,12 +47,13 @@ class MyFunction:
             pypc.copy(markdown)
             self.arr.append(comment)
             print("Successfully added to the comment list")
-            self.to_markdown()
+        elif self.delete:
+            self.delete_cell_prev()
+#             self.to_markdown()
 #             time.sleep(1)
-#             self.delete_cell_prev()
         else:
             print('It is already in the list')
-            self.to_markdown()
+#             self.to_markdown()
 #             time.sleep(1)
 #             self.delete_cell_prev()
             
