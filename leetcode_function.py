@@ -41,7 +41,10 @@ class LeetFunction:
         
     def new(self, s, h=2):
         hash = "#"*h
-        comment = f"* [{s}](#{s.replace(' ','-')})"
+        link = "https://leetcode.com/problems/"
+        text = ("-").join(s.split()[1:]).lower()
+        leet_link =link + text
+        comment = f"* [{s}](#{s.replace(' ','-')})    [(link)]({leet_link})"
         markdown = f"{hash} {s}"
         if comment not in self.arr:
             pypc.copy(markdown)
