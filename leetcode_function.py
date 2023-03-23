@@ -39,9 +39,9 @@ class LeetFunction:
             IPython.notebook.to_markdown();
         '''))
         
-    def new(self, s, h=4):
+    def new(self, s, h=2):
         hash = "#"*h
-        comment = f"1. [{s}](#{s.replace(' ','-')})"
+        comment = f"* [{s}](#{s.replace(' ','-')})"
         markdown = f"{hash} {s}"
         if comment not in self.arr:
             pypc.copy(markdown)
