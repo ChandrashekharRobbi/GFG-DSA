@@ -89,6 +89,6 @@ class LeetFunction:
         
     def makeNullArr(self):
         self.arr = []
-        time.sleep(1)
+#         time.sleep(1)
         self.delete_cell_prev()
         
