@@ -48,7 +48,7 @@ class MyFunction:
             print("Successfully added to the comment list")
 #             self.to_markdown()
 #             time.sleep(1)
-#             self.delete_cell_prev()
+            self.delete_cell_prev()
         else:
             print('It is already in the list')
             self.to_markdown()
