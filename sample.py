@@ -17,6 +17,7 @@ class MyFunction:
     '''
     def __init__(self):
         self.arr = []
+        self.delete = False
         print("Note that after executing new function your next cell will automatically converted to markdown cell :)")
         
     def delete_cell_prev(self):
