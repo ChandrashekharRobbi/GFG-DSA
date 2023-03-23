@@ -42,6 +42,7 @@ class LeetFunction:
     def new(self, s, h=2):
         hash = "#"*h
         link = "https://leetcode.com/problems/"
+        print(s)
         text = ("-").join(s.split()[1:]).lower()
         leet_link =link + text
         print(leet_link)
