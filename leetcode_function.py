@@ -42,11 +42,11 @@ class LeetFunction:
     def new(self, s, h=2):
         hash = "#"*h
         link = "https://leetcode.com/problems/"
-        print(s)
-        text = ("-").join(s.split()[1:]).lower()
+        # print(s)
+        text = "-".join(s.split(".")[1:][0].split()).lower()
         leet_link =link + text
-        print(leet_link)
-        comment = f"* ✅ [{s}](#{s.replace(' ','-')})    [(link)]({leet_link})"
+        leet_link
+        comment = f"* ✅ [{s}](#{s.replace(' ','-')})           [<a href='{leet_link}' style='color:black'>Link</a>]"
         markdown = f"{hash} {s}"
         if comment not in self.arr:
             pypc.copy(markdown)
