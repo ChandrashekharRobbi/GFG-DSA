@@ -68,11 +68,11 @@ class LeetFunction:
             
     def printArr(self):
         sum = ""
-        for i in range(len(arr)):
-            if i != len(arr) - 1:
-                sum += arr[i] + "\n"
+        for i in range(len(self.arr)):
+            if i != len(self.arr) - 1:
+                sum += self.arr[i] + "\n"
             else:
-                sum += arr[i]
+                sum += self.arr[i]
             print(i) 
         pypc.copy(sum)
         self.delete_cell_prev()
