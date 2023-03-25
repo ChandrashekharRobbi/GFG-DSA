@@ -50,7 +50,7 @@ class LeetFunction:
         leet_link =link + text
         leet_link
         comment = f"* ✅ [{s}](#{s.replace(' ','-')})           [<a href='{leet_link}' style='color:black'>Link</a>]"
-        markdown = f"{hash} {s}"
+        markdown = f"{hash} {s}\n\n* Approach:\n* Time Complexity $ O() $"
         if comment not in self.arr:
             pypc.copy(markdown)
             self.arr.append(comment)
