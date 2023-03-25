@@ -18,7 +18,7 @@ class LeetFunction:
     def __init__(self):
         self.arr = []
         self.delete = False
-        print("Note this function is especially created for my leet code solving purposes \nIt takes name of the problem and return leetcode link and it has features like create array which has markdown, comment and delete after executing and many more :)")
+        print("THis Function is Created by Chandrashekhar Robbi\nNote this function is especially created for my leet code solving purposes \nIt takes name of the problem and return leetcode link and it has features like create array which has markdown, comment and delete after executing and many more :)")
         
     def delete_cell_prev(self):
         display(Javascript('''
