@@ -58,7 +58,10 @@ class Handler(FileSystemEventHandler):
                 value = event.src_path.split("\\")[-1]
             print(value)
 #             print("Experiment name:" , value2)
-            print("GIt adding for: ", value)
+            if value != 'Untitled.ipynb':
+                print("GIt adding for: ", value)
+            else:
+                print(f"{value} is common so it wouldn't be added Rename it to add")
             if value != 'Untitled.ipynb':
                 os.popen(f'git add "{value}"')
                 time.sleep(1)
