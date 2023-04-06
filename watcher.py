@@ -59,14 +59,15 @@ class Handler(FileSystemEventHandler):
             print(value)
 #             print("Experiment name:" , value2)
             print("GIt adding for: ", value)
-            os.popen(f'git add "{value}"')
-            time.sleep(1)
-            time.sleep(1)
-            os.popen("git commit -m changes")
-            time.sleep(1)
-            os.popen("git push")
-            # os.popen("^C")
-            time.sleep(10)
+            if value != 'Untitled.ipynb':
+                os.popen(f'git add "{value}"')
+                time.sleep(1)
+                time.sleep(1)
+                os.popen("git commit -m changes")
+                time.sleep(1)
+                os.popen("git push")
+                # os.popen("^C")
+                time.sleep(10)
 
             
 
