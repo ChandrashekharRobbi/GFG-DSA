@@ -24,7 +24,9 @@ Topics
 14. [Binary Search Tree](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Binary%20Search%20Tree.ipynb)
 15. [Dynamic Programming](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Dynamic%20Programming.ipynb)
 16. [Graphs](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Graphs.ipynb)
-17.  
+17. [List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/List.ipynb)
+18. [Matrix](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Matrix.ipynb)
+19. [Searching](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Searching.ipynb)
 
 
 
