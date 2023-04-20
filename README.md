@@ -9,19 +9,22 @@ I will be using **Jupyter Notebook** as IDE
 Topics 
 
 1. [Python OOPS](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Python%20(OOPS).ipynb)
-12. [Bit Magic](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Bit%20Magic.ipynb)
-4. [Strings](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Strings.ipynb)
-2. [Stack](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Stack.ipynb)
-9. [Queue](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Queue.ipynb)
-3. [Deque](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Deque.ipynb)
+2. [Bit Magic](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Bit%20Magic.ipynb)
+3. [Strings](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Strings.ipynb)
+4. [Stack](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Stack.ipynb)
+5. [Queue](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Queue.ipynb)
+6. [Deque](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Deque.ipynb)
 7. [Linked List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Linked%20List.ipynb)
-6. [Doubly Linked List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Doubly%20Linked%20List.ipynb)
-6. [Circuar Linked List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Circular%20Linked%20List.ipynb)
-7. [Tree](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Binary%20Search%20Tree.ipynb)
-8. [Sorting](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Sorting.ipynb)
-10. [Hashing](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Hashing.ipynb)
-11. [Heap](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Heap.ipynb)
-11. [Binary Search Tree](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Heap
+8. [Doubly Linked List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Doubly%20Linked%20List.ipynb)
+9. [Circuar Linked List](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Circular%20Linked%20List.ipynb)
+10. [Tree](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Binary%20Search%20Tree.ipynb)
+11. [Sorting](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Sorting.ipynb)
+12. [Hashing](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Hashing.ipynb)
+13. [Heap](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Heap.ipynb)
+14. [Binary Search Tree](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Binary%20Search%20Tree.ipynb)
+15. [Dynamic Programming](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Dynamic%20Programming.ipynb)
+16. [Graphs](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Graphs.ipynb)
+17.  
 
 
 
