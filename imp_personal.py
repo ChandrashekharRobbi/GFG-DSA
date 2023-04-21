@@ -35,7 +35,6 @@ class MyFunction:
         
     def to_markdown(self):
         display(Javascript('''
-            IPython.notebook.insert_cell_below();
             IPython.notebook.to_markdown();
         '''))
         
@@ -49,7 +48,7 @@ class MyFunction:
             print("Successfully added to the comment list")
         elif self.delete:
             self.delete_cell_prev()
-#             self.to_markdown()
+            self.to_markdown()
 #             time.sleep(1)
         else:
             print('It is already in the list')
