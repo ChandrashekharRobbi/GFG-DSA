@@ -1,13 +1,17 @@
+import re
 import os
 import time
 import random
+import subprocess
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
+# for a safer side git pull before any other operation
 os.popen("git pull")
 
 
 class Watcher:
+    # set the Path of the directory to monitor
     DIRECTORY_TO_WATCH = "C:\GFG_DataScience\DSA"
 
     def __init__(self):
@@ -37,47 +41,56 @@ class Handler(FileSystemEventHandler):
         elif event.event_type == 'created':
             # Take any action here when a file is first created.
             print("Received created event - %s." % event.src_path)
-            os.popen('git add .\img')
-            time.sleep(1)
-            time.sleep(1)
-            if '~' in event.src_path:
-                value = event.src_path.split("~")[-1]
-            else:
-                value = event.src_path.split("\\")[-1]
-            print("created")
-            os.popen(f"git commit -m Created {value}")
-            time.sleep(1)
-            os.popen("git push")
             
 
         elif event.event_type == 'modified':
             # Taken any action here when a file is modified.
             print("Received modified event - %s." % event.src_path)
-            # event_name = event.src_path.split("~")
-            # print("Event Name",event_name[-1])
-#             value = "Problem Solving.ipynb"
-#             value2 = event.src_path.split("~")[-1]
-
+            # to extract specific file name from the event path
             if '~' in event.src_path:
                 value = event.src_path.split("~")[-1]
             else:
                 value = event.src_path.split("\\")[-1]
+            # to check which value gets printed
             print(value)
-#             print("Experiment name:" , value2)
+            # if the file is not Untitled then only perform operations
             if value != 'Untitled.ipynb':
-                print("GIt adding for: ", value)
-            else:
-                print(f"{value} is common so it wouldn't be added Rename it to add")
-            if value != 'Untitled.ipynb':
-                os.popen(f'git add "{value}"')
-                time.sleep(1)
-                time.sleep(1)
+                # get all the possible values such that it can related to changes
                 s = ["changes", "update", "modification"]
-                os.popen(f"git commit -m {random.choice(s)}")
+                # pre_msg for commit messagfe
+                pre_msg = ["Added Some Code to","Modified","Changes in "]
+                # it returns the output of what all changes we have done to the file
+                diff_output = subprocess.check_output(['git', 'diff', f'{value}']).decode()
+                # this is the pattern to find def function present in it or not
+                pattern = r"def\s+(\w+)\("
+                # Use re.search() to find the first match of the pattern in the input string
+                match = re.findall(pattern, diff_output)
+                # set initial value to None
+                commit_message = None
+                # if a match is founf then change the commit_message with the function name
+                if match:
+                    commit_message = f"{random.choice(pre_msg)} {match[-1]} function"
+                # else select random from s and change the value of commit_message
+                else:
+                    commit_message = random.choice(s)
+                # print the commit message to see in terminal
+                print(f"commit message is '{commit_message}'")
+                # now git add the file
+                os.popen(f'git add "{value}"')
+                # time.sleep so that there will be no load at once at cmd
                 time.sleep(1)
+                time.sleep(1)
+                # git commit along with message
+                os.popen(f'git commit -m "{commit_message}"')
+                time.sleep(1)
+                # finally git push 🥳
                 os.popen("git push")
                 # os.popen("^C")
+                # this timer such that it will again see in after 10 seconds
                 time.sleep(10)
+            # if not untitled then send message
+            else:
+                print(f"{value} is common so it wouldn't be added Rename it to add")
 
             
 
