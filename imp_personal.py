@@ -57,10 +57,16 @@ class MyFunction:
 #             self.delete_cell_prev()
             
     def printArr(self):
-        for i in self.arr:
+        sum = ""
+        for i in range(len(self.arr)):
+            if i != len(self.arr) - 1:
+                sum += self.arr[i] + "\n"
+            else:
+                sum += self.arr[i]
             print(i) 
-        time.sleep(5)
-        self.delete_cell_curr()
+        pypc.copy(sum)
+        self.delete_cell_prev()
+        self.jump_to_comment()
             
     def removeLastelement(self):
         self.arr.pop() 
