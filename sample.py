@@ -82,7 +82,7 @@ class Handler(FileSystemEventHandler):
                 os.popen(f'git add "{value}"')
                 time.sleep(1)
                 time.sleep(1)
-                os.popen(f"git commit -m {commit_message}")
+                os.popen(f"git commit -m '{commit_message}'")
                 time.sleep(1)
                 os.popen("git push")
                 # os.popen("^C")
