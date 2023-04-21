@@ -40,16 +40,16 @@ class Handler(FileSystemEventHandler):
             # Take any action here when a file is first created.
             print("Received created event - %s." % event.src_path)
 #             os.popen('git add .\img')
-            time.sleep(1)
-            time.sleep(1)
-            if '~' in event.src_path:
-                value = event.src_path.split("~")[-1]
-            else:
-                value = event.src_path.split("\\")[-1]
-            print("created")
-            os.popen(f"git commit -m Created {value}")
-            time.sleep(1)
-            os.popen("git push")
+#             time.sleep(1)
+#             time.sleep(1)
+#             if '~' in event.src_path:
+#                 value = event.src_path.split("~")[-1]
+#             else:
+#                 value = event.src_path.split("\\")[-1]
+#             print("created")
+#             os.popen(f"git commit -m Created {value}")
+#             time.sleep(1)
+#             os.popen("git push")
             
 
         elif event.event_type == 'modified':
