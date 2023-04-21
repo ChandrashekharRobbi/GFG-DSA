@@ -68,6 +68,7 @@ class Handler(FileSystemEventHandler):
 #             print("Experiment name:" , value2)
             if value != 'Untitled.ipynb':
                 s = ["changes", "update", "modification"]
+                pre_msg = ["Added Some Code to","Modified","Changes in "]
                 diff_output = subprocess.check_output(['git', 'diff', f'{value}']).decode()
                 pattern = r"def\s+(\w+)\("
                 # Use re.search() to find the first match of the pattern in the input string
@@ -75,7 +76,7 @@ class Handler(FileSystemEventHandler):
                 commit_message = None
                 # If a match is found, print the function name
                 if match:
-                    commit_message = f"Modification in function {match[-1]}"
+                    commit_message = f"{random.choice(pre_msg)} {match[-1]} function"
                 else:
                     commit_message = random.choice(s)
                 print(f"commit message is '{commit_message}'")
