@@ -78,7 +78,7 @@ class Handler(FileSystemEventHandler):
                     commit_message = f"Function name {match[-1]}"
                 else:
                     commit_message = random.choice(s)
-                print(f"commit message is {commit_message}")
+                print(f"commit message is '{commit_message}'")
                 os.popen(f'git add "{value}"')
                 time.sleep(1)
                 time.sleep(1)
