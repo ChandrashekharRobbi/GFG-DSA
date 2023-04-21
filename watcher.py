@@ -1,5 +1,6 @@
 import os
 import time
+import random
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
@@ -39,7 +40,11 @@ class Handler(FileSystemEventHandler):
             os.popen('git add .\img')
             time.sleep(1)
             time.sleep(1)
-            os.popen("git commit -m changes")
+            if '~' in event.src_path:
+                value = event.src_path.split("~")[-1]
+            else:
+                value = event.src_path.split("\\")[-1]
+            os.popen(f"git commit -m Created {value}")
             time.sleep(1)
             os.popen("git push")
             
@@ -66,7 +71,8 @@ class Handler(FileSystemEventHandler):
                 os.popen(f'git add "{value}"')
                 time.sleep(1)
                 time.sleep(1)
-                os.popen("git commit -m changes")
+                s = ["changes", "update", "modification"]
+                os.popen(f"git commit -m {random.choice(s)}")
                 time.sleep(1)
                 os.popen("git push")
                 # os.popen("^C")
