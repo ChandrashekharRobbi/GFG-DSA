@@ -70,16 +70,16 @@ class MyFunction:
             
     def removeLastelement(self):
         self.arr.pop() 
-        time.sleep(3)
+#         time.sleep(3)
         self.delete_cell_prev()
         
     def removeByUsingIndex(self, x):
         self.arr.pop(x)
-        time.sleep(3)
+#         time.sleep(3)
         self.delete_cell_prev()
         
     def makeNullArr(self):
         self.arr = []
-        time.sleep(1)
+#         time.sleep(1)
         self.delete_cell_prev()
         
