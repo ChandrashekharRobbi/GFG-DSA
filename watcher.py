@@ -44,6 +44,7 @@ class Handler(FileSystemEventHandler):
                 value = event.src_path.split("~")[-1]
             else:
                 value = event.src_path.split("\\")[-1]
+            print("created")
             os.popen(f"git commit -m Created {value}")
             time.sleep(1)
             os.popen("git push")
