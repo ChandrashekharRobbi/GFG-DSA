@@ -58,7 +58,7 @@ class Handler(FileSystemEventHandler):
                 # get all the possible values such that it can related to changes
                 s = ["changes", "update", "modification","Made modifications", "Updated code", "Implemented alterations", "Tweaked the code", "Adjusted the program", "Modified the source code", "Refactored the code", "Edited the files", "Made adjustments"]
                 # pre_msg for commit messagfe
-                pre_msg = ["Added Some Code to","Modified","Changes in "]
+                pre_msg = ["Added Some Code to","Modified","Changes in ", "Added new functionality to", "Introduced code changes to","Integrated new code into"]
                 # it returns the output of what all changes we have done to the file
                 diff_output = subprocess.check_output(['git', 'diff', f'{value}']).decode()
                 # this is the pattern to find def function present in it or not
