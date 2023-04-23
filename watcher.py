@@ -56,7 +56,7 @@ class Handler(FileSystemEventHandler):
             # if the file is not Untitled then only perform operations
             if value != 'Untitled.ipynb':
                 # get all the possible values such that it can related to changes
-                s = ["changes", "update", "modification"]
+                s = ["changes", "update", "modification","Made modifications", "Updated code", "Implemented alterations", "Tweaked the code", "Adjusted the program", "Modified the source code", "Refactored the code", "Edited the files", "Made adjustments"]
                 # pre_msg for commit messagfe
                 pre_msg = ["Added Some Code to","Modified","Changes in "]
                 # it returns the output of what all changes we have done to the file
