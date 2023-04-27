@@ -82,7 +82,8 @@ class Handler(FileSystemEventHandler):
                 time.sleep(1)
                 time.sleep(1)
                 # git commit along with message
-                os.popen(f'git commit -m "{commit_message}"')
+                if not commit_message:
+                    os.popen(f'git commit -m "{commit_message}"') 
                 time.sleep(1)
                 # finally git push 🥳
                 os.popen("git push")
