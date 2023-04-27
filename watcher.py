@@ -44,6 +44,7 @@ class Handler(FileSystemEventHandler):
             
 
         elif event.event_type == 'modified':
+            GREEN = "\033[1;32m"
             RED = "\033[1;31m"
             RESET = "\033[0m"
             # Taken any action here when a file is modified.
@@ -79,7 +80,7 @@ class Handler(FileSystemEventHandler):
                 # print the commit message to see in terminal
                 k = f"{RED}You haven't made changes in the functions so commit will not be added :({RESET}"
                 if commit_message != None:
-                    print(f"commit message is '{commit_message}'")
+                    print(f"commit message is {GREEN}'{commit_message}'{GREEN}")
                 else:
 #                     print(k)
                       pass
@@ -94,7 +95,7 @@ class Handler(FileSystemEventHandler):
                     os.popen(f'git commit -m "{commit_message}"') 
                     print("inside")
                 else:
-                    print("You haven't made changes in the functions so commit will not be added :(")
+                    print(f"{RED}You haven't made changes in the functions so commit will not be added :({RESET}")
                 time.sleep(1)
                 # finally git push 🥳
                 os.popen("git push")
