@@ -72,7 +72,8 @@ class Handler(FileSystemEventHandler):
                     commit_message = f"{random.choice(pre_msg)} {match[-1]} function"
                 # else select random from s and change the value of commit_message
                 else:
-                    commit_message = random.choice(s)
+#                     commit_message = random.choice(s)
+                      pass
                 # print the commit message to see in terminal
                 print(f"commit message is '{commit_message}'")
                 # now git add the file
