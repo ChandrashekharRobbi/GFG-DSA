@@ -45,6 +45,7 @@ class Handler(FileSystemEventHandler):
 
         elif event.event_type == 'modified':
             RED = "\033[1;31m"
+            RESET = "\033[0m"
             # Taken any action here when a file is modified.
             print("Received modified event - %s." % event.src_path)
             # to extract specific file name from the event path
@@ -76,11 +77,12 @@ class Handler(FileSystemEventHandler):
 #                     commit_message = random.choice(s)
                       pass
                 # print the commit message to see in terminal
-                k = f"{RED}You haven't made changes in the functions so commit will not be added :("
+                k = f"{RED}You haven't made changes in the functions so commit will not be added :({RESET}"
                 if commit_message != None:
                     print(f"commit message is '{commit_message}'")
                 else:
-                    print(k)
+#                     print(k)
+                      pass
 #                 print(f"commit message is '{commit_message  else k}'")
                 # now git add the file
                 os.popen(f'git add "{value}"')
