@@ -80,7 +80,7 @@ class Handler(FileSystemEventHandler):
                 # print the commit message to see in terminal
                 k = f"{RED}You haven't made changes in the functions so commit will not be added :({RESET}"
                 if commit_message != None:
-                    print(f"commit message is {GREEN}'{commit_message}'{GREEN}")
+                    print(f"commit message is {GREEN}'{commit_message}'{RESET}")
                 else:
 #                     print(k)
                       pass
@@ -100,11 +100,13 @@ class Handler(FileSystemEventHandler):
                 # finally git push 🥳
                 os.popen("git push")
                 # os.popen("^C")
+                print(f"{GREEN}Pushed the code to Github 🥳{RESET}")
                 # this timer such that it will again see in after 10 seconds
                 time.sleep(10)
             # if not untitled then send message
             else:
                 print(f"{value} is common so it wouldn't be added Rename it to add")
+            print("test")
 
             
 
