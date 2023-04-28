@@ -35,6 +35,33 @@ class Handler(FileSystemEventHandler):
 
     @staticmethod
     def on_any_event(event):
+        def checkForName(event):
+            # to extract specific file name from the event path
+            if '~' in event:
+                value = event.split("~")[-1]
+            else:
+                value = event.split("\\")[-1]
+            # to check which value gets printed
+            return value
+        
+        def findPatternOfFunction(value):
+            diff_output = subprocess.check_output(['git', 'diff', f'{value}']).decode()
+            # this is the pattern to find def function present in it or not
+            pattern = r"def\s+(\w+)\("
+            # Use re.search() to find the first match of the pattern in the input string
+            return re.findall(pattern, diff_output)
+        
+        def commit_message_find(pre_msg, match, s, count):
+            if match:
+                return f"{random.choice(pre_msg)} {match[-1]} function"
+                # else select random from s and change the value of commit_message
+            else:
+                count += 1
+                if count == 10:
+                    count = 0
+                    return random.choice(s)
+
+        
         if event.is_directory:
             return None
 
@@ -44,14 +71,10 @@ class Handler(FileSystemEventHandler):
             
 
         elif event.event_type == 'modified':
+            count = 0
             # Taken any action here when a file is modified.
             print("Received modified event - %s." % event.src_path)
-            # to extract specific file name from the event path
-            if '~' in event.src_path:
-                value = event.src_path.split("~")[-1]
-            else:
-                value = event.src_path.split("\\")[-1]
-            # to check which value gets printed
+            value = checkForName(event.src_path)
             print(value)
             # if the file is not Untitled then only perform operations
             if value != 'Untitled.ipynb':
@@ -60,19 +83,11 @@ class Handler(FileSystemEventHandler):
                 # pre_msg for commit messagfe
                 pre_msg = ["Added Some Code to","Modified","Changes in "]
                 # it returns the output of what all changes we have done to the file
-                diff_output = subprocess.check_output(['git', 'diff', f'{value}']).decode()
-                # this is the pattern to find def function present in it or not
-                pattern = r"def\s+(\w+)\("
-                # Use re.search() to find the first match of the pattern in the input string
-                match = re.findall(pattern, diff_output)
+                match = findPatternOfFunction(value)
                 # set initial value to None
                 commit_message = None
-                # if a match is founf then change the commit_message with the function name
-                if match:
-                    commit_message = f"{random.choice(pre_msg)} {match[-1]} function"
-                # else select random from s and change the value of commit_message
-                else:
-                    commit_message = random.choice(s)
+                # if a match is found then change the commit_message with the function name
+                commit_message = commit_message_find(pre_msg, match, s, count)
                 # print the commit message to see in terminal
                 print(f"commit message is '{commit_message}'")
                 # now git add the file
@@ -81,7 +96,10 @@ class Handler(FileSystemEventHandler):
                 time.sleep(1)
                 time.sleep(1)
                 # git commit along with message
-                os.popen(f'git commit -m "{commit_message}"')
+                if commit_message != None:
+                    os.popen(f'git commit -m "{commit_message}"')
+                else:
+                    pass
                 time.sleep(1)
                 # finally git push 🥳
                 os.popen("git push")
