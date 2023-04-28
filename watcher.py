@@ -93,20 +93,19 @@ class Handler(FileSystemEventHandler):
                 # git commit along with message
                 if commit_message != None:
                     os.popen(f'git commit -m "{commit_message}"') 
-                    print("inside")
+                    print(f"{GREEN}Pushed the code to Github 🥳{RESET}")
                 else:
                     print(f"{RED}You haven't made changes in the functions so commit will not be added :({RESET}")
                 time.sleep(1)
                 # finally git push 🥳
                 os.popen("git push")
                 # os.popen("^C")
-                print(f"{GREEN}Pushed the code to Github 🥳{RESET}")
                 # this timer such that it will again see in after 10 seconds
                 time.sleep(10)
             # if not untitled then send message
             else:
                 print(f"{value} is common so it wouldn't be added Rename it to add")
-            print("test")
+#             print("test")
 
             
 
