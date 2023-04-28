@@ -53,13 +53,15 @@ class Handler(FileSystemEventHandler):
         
         def commit_message_find(pre_msg, match, s, count):
             if match:
-                return f"{random.choice(pre_msg)} {match[-1]} function"
+                return f"{random.choice(pre_msg)} {match[-1]} function",0
                 # else select random from s and change the value of commit_message
             else:
                 count += 1
+                print(f"count {count}")
+                return None,count
                 if count == 10:
                     count = 0
-                    return random.choice(s)
+                    return random.choice(s),count
 
         
         if event.is_directory:
@@ -87,7 +89,7 @@ class Handler(FileSystemEventHandler):
                 # set initial value to None
                 commit_message = None
                 # if a match is found then change the commit_message with the function name
-                commit_message = commit_message_find(pre_msg, match, s, count)
+                commit_message,count = commit_message_find(pre_msg, match, s, count)
                 # print the commit message to see in terminal
                 print(f"commit message is '{commit_message}'")
                 # now git add the file
