@@ -51,7 +51,11 @@ class Handler(FileSystemEventHandler):
             # Use re.search() to find the first match of the pattern in the input string
             return re.findall(pattern, diff_output)
         
-        def commit_message_find(pre_msg, match, s, count):
+        def countGen():
+            return 0
+        
+        def commit_message_find(pre_msg, match, s):
+            count = countGen()
             if match:
                 return f"{random.choice(pre_msg)} {match[-1]} function",0
                 # else select random from s and change the value of commit_message
@@ -73,7 +77,7 @@ class Handler(FileSystemEventHandler):
             
 
         elif event.event_type == 'modified':
-            count = 0
+#             count = 0
             # Taken any action here when a file is modified.
             print("Received modified event - %s." % event.src_path)
             value = checkForName(event.src_path)
