@@ -104,6 +104,7 @@ class Handler(FileSystemEventHandler):
                 os.popen("git push")
                 # os.popen("^C")
                 # this timer such that it will again see in after 10 seconds
+                print(f"{GREEN}Git Pushed Successfully{RESET} 🥳"
                 time.sleep(10)
             # if not untitled then send message
             else:
