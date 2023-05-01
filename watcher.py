@@ -77,16 +77,8 @@ class Handler(FileSystemEventHandler):
                 # else select random from s and change the value of commit_message
                 else:
 #                     commit_message = random.choice(s)
-                      pass
-                # print the commit message to see in terminal
-                k = f"{RED}You haven't made changes in the functions so commit will not be added :({RESET}"
-                print(f"Counter: {Handler.counter}")
-                if commit_message != None:
-                    print(f"commit message is {GREEN}'{commit_message}'{RESET}")
-                else:
-#                     print(k)
-                        # check if the counter has reached 10
-                        if Handler.counter == 10:
+                      # check if the counter has reached 10
+                        if Handler.counter == 2:
                            # reset the counter
                            Handler.counter = 0
                            # choose a random commit message from s
@@ -94,6 +86,15 @@ class Handler(FileSystemEventHandler):
                         else:
                             # increment the counter
                             Handler.counter += 1
+                # print the commit message to see in terminal
+                k = f"{RED}You haven't made changes in the functions so commit will not be added :({RESET}"
+                print(f"Counter: {Handler.counter}")
+                if commit_message != None:
+                    print(f"commit message is {GREEN}'{commit_message}'{RESET}")
+                else:
+#                     print(k)
+                      pass
+                        
 #                 print(f"commit message is '{commit_message  else k}'")
                 # now git add the file
                 os.popen(f'git add "{value}"')
@@ -103,7 +104,7 @@ class Handler(FileSystemEventHandler):
                 # git commit along with message
                 if commit_message != None:
                     os.popen(f'git commit -m "{commit_message}"') 
-                    print(f"{GREEN}Pushed the code to Github 🥳{RESET}")
+                    
                 else:
                     print(f"{RED}You haven't made changes in the functions so commit will not be added :({RESET}")
                 time.sleep(1)
