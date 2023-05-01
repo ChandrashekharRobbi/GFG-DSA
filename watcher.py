@@ -87,7 +87,7 @@ class Handler(FileSystemEventHandler):
                             # increment the counter
                             Handler.counter += 1
                 # print the commit message to see in terminal
-                k = f"{RED}You haven't made changes in the functions so commit will not be added :({RESET}"
+                k = f"{RED}You haven't made changes in the functions so your commit will  be added after {10 - Handler.counter} changes in your file:({RESET}"
                 print(f"Counter: {Handler.counter}")
                 if commit_message != None:
                     print(f"commit message is {GREEN}'{commit_message}'{RESET}")
