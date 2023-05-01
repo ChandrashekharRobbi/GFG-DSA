@@ -92,8 +92,7 @@ class Handler(FileSystemEventHandler):
                 if commit_message != None:
                     print(f"commit message is {GREEN}'{commit_message}'{RESET}")
                 else:
-#                     print(k)
-                      pass
+                    print(k)
                         
 #                 print(f"commit message is '{commit_message  else k}'")
                 # now git add the file
