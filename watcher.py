@@ -78,7 +78,7 @@ class Handler(FileSystemEventHandler):
                 else:
 #                     commit_message = random.choice(s)
                       # check if the counter has reached 10
-                        if Handler.counter == 2:
+                        if Handler.counter == 10:
                            # reset the counter
                            Handler.counter = 0
                            # choose a random commit message from s
@@ -91,21 +91,14 @@ class Handler(FileSystemEventHandler):
                 print(f"Counter: {Handler.counter}")
                 if commit_message != None:
                     print(f"commit message is {GREEN}'{commit_message}'{RESET}")
+                    # now git add the file
+                    os.popen(f'git add "{value}"')
+                    # time.sleep so that there will be no load at once at cmd
+                    time.sleep(1)
+                    time.sleep(1)
+                    os.popen(f'git commit -m "{commit_message}"') 
                 else:
                     print(k)
-                        
-#                 print(f"commit message is '{commit_message  else k}'")
-                # now git add the file
-                os.popen(f'git add "{value}"')
-                # time.sleep so that there will be no load at once at cmd
-                time.sleep(1)
-                time.sleep(1)
-                # git commit along with message
-                if commit_message != None:
-                    os.popen(f'git commit -m "{commit_message}"') 
-                    
-                else:
-                    print(f"{RED}You haven't made changes in the functions so commit will not be added :({RESET}")
                 time.sleep(1)
                 # finally git push 🥳
                 os.popen("git push")
