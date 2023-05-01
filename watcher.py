@@ -32,6 +32,7 @@ class Watcher:
 
 
 class Handler(FileSystemEventHandler):
+    counter = 0
 
     @staticmethod
     def on_any_event(event):
@@ -83,7 +84,15 @@ class Handler(FileSystemEventHandler):
                     print(f"commit message is {GREEN}'{commit_message}'{RESET}")
                 else:
 #                     print(k)
-                      pass
+                        # check if the counter has reached 10
+                        if Handler.counter == 10:
+                           # reset the counter
+                           Handler.counter = 0
+                           # choose a random commit message from s
+                           commit_message = random.choice(s)
+                        else:
+                            # increment the counter
+                            Handler.counter += 1
 #                 print(f"commit message is '{commit_message  else k}'")
                 # now git add the file
                 os.popen(f'git add "{value}"')
