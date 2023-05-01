@@ -80,6 +80,7 @@ class Handler(FileSystemEventHandler):
                       pass
                 # print the commit message to see in terminal
                 k = f"{RED}You haven't made changes in the functions so commit will not be added :({RESET}"
+                print(f"Counter: {Handler.counter}")
                 if commit_message != None:
                     print(f"commit message is {GREEN}'{commit_message}'{RESET}")
                 else:
