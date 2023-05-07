@@ -2,6 +2,8 @@
 
 `imp_personal.py` function Created by me 
 
+It has a many fucntionalities
+
 I will be writing theory explaination , implmentation and problems based on each section as mentioned in the GFG DSA with python course
 
 I will be using **Jupyter Notebook** as IDE
