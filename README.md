@@ -7,6 +7,8 @@ It has a many fucntionalities such as
 
 `watcher.py` : The name only a watcher but can do a so much
 
+* Watch the changes or created new function (only do something when there is any changes related to functions This i have deleberately chosen.)
+
 
 I will be writing theory explaination , implmentation and problems based on each section as mentioned in the GFG DSA with python course
 
