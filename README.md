@@ -4,6 +4,7 @@
 
 It has a many fucntionalities such as 
 * Making Markdown comment along with a link which helps to access the topic from top of the page
+* And the executed command except `.new()` all will be deleted after Running the cell
 
 `watcher.py` : The name only a watcher but can do a so much
 
