@@ -2,13 +2,13 @@
 
 `imp_personal.py` function Created by me 
 
-It has a many fucntionalities such as 
-* Making Markdown comment along with a link which helps to access the topic from top of the page
-* And the executed command except `.new()` all will be deleted after Running the cell
+It has numerous features, including 
+* Creating Markdown comments and a link that allows you to visit the topic from the top of the page.
+* Except for `.new()` all executed commands will be removed when the cell is run.
 
-`watcher.py` : The name only a watcher but can do a so much
+`watcher.py` : The name is merely a watcher, but he can do so much.
 
-* Watch the changes or created new function (only do something when there is any changes related to functions This i have deleberately chosen.)
+* Keep an eye on the updates or add a new function (only do something when there is any changes related to functions This I have deleberately chosen.)
 * Then make git operations when the file is modified 
 * Operations such as
     * `git add`
