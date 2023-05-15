@@ -9,7 +9,7 @@ It has numerous features, including
 `watcher.py` : The name is merely a watcher, but he can do so much.
 
 * Keep an eye on the updates or add a new function (only do something when there is any changes related to functions This I have deleberately chosen.)
-* Then make git operations when the file is modified 
+* When the file is changed, do git procedures.
 * Operations such as
     * `git add`
     * `git commit`
