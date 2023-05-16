@@ -1,21 +1,5 @@
 # GFG-DSA with Python
 
-`imp_personal.py` function Created by me 
-
-It has numerous features, including 
-* Creating Markdown comments and a link that allows you to visit the topic from the top of the page.
-* Except for `.new()` all executed commands will be removed when the cell is run.
-
-`watcher.py` : The name is merely a watcher, but he can do so much.
-
-* Keep an eye on the updates or add a new function (only do something when there is any changes related to functions This I have deleberately chosen.)
-* When the file is changed, do git procedures.
-* Operations such as
-    * `git add`
-    * `git commit`
-    * `git push`
-
-
 I will be writing theory explaination , implmentation and problems based on each section as mentioned in the GFG DSA with python course
 
 I will be using **Jupyter Notebook** as IDE
@@ -45,10 +29,24 @@ Topics
 19. [Searching](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Searching.ipynb)
 20. [2D Matrix](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/2D%20Matrix.ipynb)
 
-
-
-
-
 ## Cheat Sheet for Big O Notation
 
 [Big O CheatSheet](https://www.bigocheatsheet.com)
+
+
+
+`imp_personal.py` function Created by me 
+
+It has numerous features, including 
+* Creating Markdown comments and a link that allows you to visit the topic from the top of the page.
+* Except for `.new()` all executed commands will be removed when the cell is run.
+
+`watcher.py` : The name is merely a watcher, but he can do so much.
+
+* Keep an eye on the updates or add a new function (only do something when there is any changes related to functions This I have deleberately chosen.)
+* When the file is changed, do git procedures.
+* Operations such as
+    * `git add`
+    * `git commit`
+    * `git push`
+
