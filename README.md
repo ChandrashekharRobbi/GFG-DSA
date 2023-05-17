@@ -50,4 +50,5 @@ It has numerous features, including
     * `git commit`
     * `git push`
  * This operations only execute when there is a Change in Function or when function is newly created.
+ * Also Added Colored logs to show different output logs
 
