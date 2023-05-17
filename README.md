@@ -49,4 +49,5 @@ It has numerous features, including
     * `git add`
     * `git commit`
     * `git push`
+ * This operations only execute when there is a Change in Function or when function is newly created.
 
