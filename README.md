@@ -58,5 +58,5 @@ It has numerous features, including
  Screenshot of the logs:
  
  
-![image](https://github.com/ChandrashekharRobbi/GFG-DSA/assets/91750738/6ffff699-f121-487d-a497-f23ffa368108)
+![image](https://github.com/ChandrashekharRobbi/GFG-DSA/assets/91750738/0ad5d7bc-252f-47a2-ba34-69f03059da19)
 
