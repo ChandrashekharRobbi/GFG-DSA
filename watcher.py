@@ -60,7 +60,7 @@ class Handler(FileSystemEventHandler):
             # if the file is not Untitled then only perform operations
             if value != 'Untitled.ipynb':
                 # get all the possible values such that it can related to changes
-                s = ["changes", "update", "modification","Made modifications", "Updated code", "Implemented alterations", "Tweaked the code", "Adjusted the program", "Modified the source code", "Refactored the code", "Edited the files", "Made adjustments"]
+                s = ["changes", "update", "modification","Made modifications", "Updated code", "Implemented alterations", "Tweaked the code", "Adjusted the program", "Modified the source code", "Refactored the code", "Edited", "Made adjustments"]
                 # pre_msg for commit messagfe
                 pre_msg = ["Added Some Code to","Modified","Changes in ", "Added new functionality to", "Introduced code changes to","Integrated new code into","Updated code in","Made changes to","Tweaked code in","Edited code in","Adjusted code in","Refactored code in","Revised code in","Reworked code in","Altered code in","Improved code in"]
                 # it returns the output of what all changes we have done to the file
@@ -87,7 +87,8 @@ class Handler(FileSystemEventHandler):
                             # increment the counter
                             Handler.counter += 1
                 # print the commit message to see in terminal
-                k = f"{RED}You haven't made changes in the functions so your commit will  be added after {10 - Handler.counter} changes in your file:({RESET}"
+                k = f"{RED}You haven't made changes in the functions so your commit will be added after {10 - Handler.counter} changes in your file:({RESET}" if (10 - Handler.counter) > 0 else f"{GREEN}Your commit will be added now:){RESET}"
+
                 print(f"Counter: {Handler.counter}")
                 if commit_message != None:
                     print(f"commit message is {GREEN}'{commit_message}'{RESET}")
@@ -95,16 +96,17 @@ class Handler(FileSystemEventHandler):
                     os.popen(f'git add "{value}"')
                     # time.sleep so that there will be no load at once at cmd
                     time.sleep(1)
-                    time.sleep(1)
                     os.popen(f'git commit -m "{commit_message}"') 
+                    # finally git push 🥳
+                    time.sleep(1)
+                    os.popen("git push")
+                    # os.popen("^C")
+                    time.sleep(1)
+                    # this timer such that it will again see in after 10 seconds
+                    print(f"{GREEN}Git Pushed Successfully{RESET} 🥳")
                 else:
                     print(k)
-                time.sleep(1)
-                # finally git push 🥳
-                os.popen("git push")
-                # os.popen("^C")
-                # this timer such that it will again see in after 10 seconds
-                print(f"{GREEN}Git Pushed Successfully{RESET} 🥳")
+            
                 time.sleep(10)
             # if not untitled then send message
             else:
