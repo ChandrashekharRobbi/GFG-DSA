@@ -74,6 +74,7 @@ class Handler(FileSystemEventHandler):
                 # if a match is founf then change the commit_message with the function name
                 if match:
                     commit_message = f"{random.choice(pre_msg)} {match[-1]} function"
+                    Handler.counter = 0
                 # else select random from s and change the value of commit_message
                 else:
 #                     commit_message = random.choice(s)
