@@ -52,3 +52,11 @@ It has numerous features, including
  * This operations only execute when there is a Change in Function or when function is newly created.
  * Also Added Colored logs to show different output logs
 
+
+
+
+ Screenshot of the logs:
+ 
+ 
+![image](https://github.com/ChandrashekharRobbi/GFG-DSA/assets/91750738/1dc8ebb8-0d25-4b61-84d1-6a8fafbb98e7)
+
