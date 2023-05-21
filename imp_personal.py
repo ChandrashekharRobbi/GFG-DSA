@@ -53,7 +53,7 @@ class MyFunction:
         else:
             print('It is already in the list')
             self.to_markdown()
-#             time.sleep(1)
+            time.sleep(1)
 #             self.delete_cell_prev()
             
     def printArr(self):
