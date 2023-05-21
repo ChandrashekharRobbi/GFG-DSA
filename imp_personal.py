@@ -52,7 +52,7 @@ class MyFunction:
 #             time.sleep(1)
         else:
             print('It is already in the list')
-#             self.to_markdown()
+            self.to_markdown()
 #             time.sleep(1)
 #             self.delete_cell_prev()
             
