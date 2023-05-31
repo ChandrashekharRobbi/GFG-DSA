@@ -73,7 +73,7 @@ class Handler(FileSystemEventHandler):
                 commit_message = None
                 # if a match is founf then change the commit_message with the function name
                 if match:
-                    commit_message = f"{random.choice(pre_msg)} {match[-1]} function"
+                    commit_message = f"{random.choice(pre_msg)} `{match[-1]}()` function"
                     Handler.counter = 0
                 # else select random from s and change the value of commit_message
                 else:
@@ -87,6 +87,7 @@ class Handler(FileSystemEventHandler):
                         else:
                             # increment the counter
                             Handler.counter += 1
+#                             Handler.counter = 10
                 # print the commit message to see in terminal
                 k = f"{RED}You haven't made changes in the functions so your commit will be added after {10 - Handler.counter} changes in your file:({RESET}" if (10 - Handler.counter) > 0 else f"{GREEN}Your commit will be added now:){RESET}"
 
