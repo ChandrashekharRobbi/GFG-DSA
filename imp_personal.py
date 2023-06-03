@@ -66,7 +66,7 @@ class MyFunction:
             print(i) 
         pypc.copy(sum)
         self.delete_cell_prev()
-        self.jump_to_comment()
+        # self.jump_to_comment()
             
     def removeLastelement(self):
         self.arr.pop() 
