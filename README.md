@@ -6,6 +6,8 @@ I will be using **Jupyter Notebook** as IDE
 
 > Note:  so the links which you see at start of any notebook may not be able to open in Github 
 
+* Use this link to open : [Jupyter Nbviewer](https://nbviewer.org/github/ChandrashekharRobbi/GFG-DSA/tree/main/)
+
 Topics 
 
 1. [Python OOPS](https://github.com/ChandrashekharRobbi/GFG-DSA/blob/main/Python%20(OOPS).ipynb)
