@@ -17,7 +17,7 @@ print(f"{GREEN}Hey Chandrashekhar All the best Do bunch of problems today üëçü
 
 class Watcher:
     # set the Path of the directory to monitor
-    DIRECTORY_TO_WATCH = "C:\GFG_DataScience\LeetCode\Blind 75"
+    DIRECTORY_TO_WATCH = "C:\GFG_DataScience\DSA\Basic DSA Questions"
 
 
     def __init__(self):
